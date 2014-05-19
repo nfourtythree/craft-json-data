@@ -1,5 +1,6 @@
+```
 // Template Tag
-{{ entries | examplePlugin(
+{{ entries | json_data(
                 "id",
                 "title",
                 "category.title",
@@ -52,3 +53,4 @@
         ]
     },
 }
+```

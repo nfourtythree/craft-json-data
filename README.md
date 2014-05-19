@@ -1,3 +1,11 @@
+# JSON Data plugin for craftcms
+
+Adds `json_data` filter to templates allowing the pipe in of entry data and return of json encoded data.
+
+It accepts field names as parameters (comma separated) and works with related fields.
+
+Very early release.
+
 ```
 // Template Tag
 {{ entries | json_data(

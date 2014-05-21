@@ -1,7 +1,7 @@
 <?php
 namespace Craft;
 
-class Json_dataPlugin extends BasePlugin
+class JsonDataPlugin extends BasePlugin
 {
     function getName()
     {
@@ -25,8 +25,8 @@ class Json_dataPlugin extends BasePlugin
 
     public function addTwigExtension()
     {
-        Craft::import('plugins.json_data.twigextensions.Json_dataTwigExtension');
+        Craft::import('plugins.jsonData.twigextensions.JsonDataTwigExtension');
 
-        return new Json_dataTwigExtension();
+        return new JsonDataTwigExtension();
     }
 }

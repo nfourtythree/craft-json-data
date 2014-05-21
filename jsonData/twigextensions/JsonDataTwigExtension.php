@@ -2,7 +2,7 @@
 
 namespace Craft;
 
-class Json_dataTwigExtension extends \Twig_Extension
+class JsonDataTwigExtension extends \Twig_Extension
 {
     protected $env;
 
@@ -13,12 +13,12 @@ class Json_dataTwigExtension extends \Twig_Extension
 
     public function getFilters()
     {
-        return array('json_data' => new \Twig_Filter_Method($this, 'jsonData'));
+        return array('jsonData' => new \Twig_Filter_Method($this, 'jsonData'));
     }
 
     public function getFunctions()
     {
-        return array('json_data' => new \Twig_Function_Method($this, 'jsonData'));
+        return array('jsonData' => new \Twig_Function_Method($this, 'jsonData'));
     }
 
     public function initRuntime(\Twig_Environment $env)
@@ -28,6 +28,7 @@ class Json_dataTwigExtension extends \Twig_Extension
 
     public function jsonData()
     {
+        craft()->jsonData->stuff();
         $fields = func_get_args();
         $entries = array_shift($fields);
 

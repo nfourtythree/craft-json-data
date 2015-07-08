@@ -8,7 +8,7 @@ Very early release.
 
 ```
 // Template Tag
-{{ entries | json_data(
+{{ entries | jsonData(
                 "id",
                 "title",
                 "category.title",

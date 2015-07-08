@@ -62,3 +62,26 @@ Very early release.
     },
 }
 ```
+
+Added the ability to return Asset transforms by using getUrl() with the handle and returns it in the array
+
+```
+// Template Tag
+{{ entries | jsonData(
+                "id",
+                "image.getUrl('myTransformHandle')") | raw }}
+
+
+
+// Returns
+{
+    {
+        "id": 1,
+        "image":  [
+            {
+                "myTransformHandle": "http://example.craft.dev/upload/path/_myTransformHandle/image.jpg"
+            }
+        ]
+    }
+}
+```

@@ -61,6 +61,11 @@ class JsonDataService extends BaseApplicationComponent
     {
         $attributes = array();
         foreach ($attr as $attribute_key => $attribute) {
+            if (preg_match("/^getUrl\((.*?)\)/i", $attribute, $matches)) {
+                if (is_array($matches) and isset($matches[1]) and $transformHandle = trim(str_replace(array("'",'"'), "", $matches[1]))) {
+                    $attributes[$transformHandle] = $entry->getUrl($transformHandle);
+                }
+            }
             if (is_string($attribute) and isset($entry->{$attribute})) {
                 $attributes[$attribute] = $entry->{$attribute};
             } elseif (is_string($attribute_key) and is_array($attribute) and isset($entry->{$attribute_key})) {

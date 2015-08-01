@@ -16,9 +16,7 @@ Very early release.
                 "myRelatedField.customField",
                 "myRelatedField.itsRelatedField.title") | raw }}
 
-
-
-// Returns
+// Passing an array of entries returns
 {
     {
         "id": 1,
@@ -60,6 +58,28 @@ Very early release.
             }
         ]
     },
+}
+
+// Passing a single entry returns
+{
+    "id": 1,
+    "title": "Entry Title",
+    "category": [
+        {
+            "title": "Category Title"
+        }
+    ],
+    "myRelatedField": [
+        {
+            "title": "Related Entry's Title",
+            "customField": "Custom Data",
+            "itsRelatedField": [
+                {
+                    "title": "Related Related Title"
+                }
+            ],
+        }
+    ]
 }
 ```
 

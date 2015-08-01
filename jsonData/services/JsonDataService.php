@@ -16,7 +16,7 @@ class JsonDataService extends BaseApplicationComponent
                 foreach ($entries as $entry) {
                     $json_data[] = $this->_fieldData($entry, $fields);
                 }
-            } else if ($entries instanceof EntryModel) {
+            } else if (is_object($entries)) {
                 $json_data = $this->_fieldData($entries, $fields);
             }
 

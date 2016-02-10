@@ -25,7 +25,7 @@ class JsonDataPlugin extends BasePlugin
 
     public function addTwigExtension()
     {
-        Craft::import('plugins.jsonData.twigextensions.JsonDataTwigExtension');
+        Craft::import('plugins.jsondata.twigextensions.JsonDataTwigExtension');
 
         return new JsonDataTwigExtension();
     }

@@ -20,7 +20,7 @@ class JsonDataPlugin extends BasePlugin
 
     function getDeveloperUrl()
     {
-        return 'http://n43.co.uk';
+        return 'http://n43.me';
     }
 
     public function addTwigExtension()

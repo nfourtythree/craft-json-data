@@ -15,7 +15,7 @@ class JsonDataPlugin extends BasePlugin
 
     function getDeveloper()
     {
-        return 'Nathaniel Hammond';
+        return 'nfourtythree';
     }
 
     function getDeveloperUrl()

@@ -105,3 +105,19 @@ Added the ability to return Asset transforms by using getUrl() with the handle a
     }
 }
 ```
+
+## JSON Data Changelog
+
+### 0.1.2 -- 2014.05.19
+
+* Added parsing for returning raw content of Rich Text Fields
+
+### 0.1.1 -- 2015.08.01
+
+* Allowed return of single entry
+
+### 0.1.0 -- 2014.05.19
+
+* Initial release
+
+Brought to you by [nfourtythree](http://n43.me)

@@ -43,7 +43,7 @@ class JsonDataService extends BaseApplicationComponent
                     }
                 }
             } else {
-                $return[$field] = $entry->{$field};
+                $return[$field] = $this->_parseData($field, $entry->{$field});
             }
         }
 
@@ -54,8 +54,8 @@ class JsonDataService extends BaseApplicationComponent
     {
         $fieldData = craft()->fields->getFieldByHandle($field);
 
-        if ($fieldData["type"] == "something") {
-            // do ALL THE field types
+        if ($data instanceof RichTextData) {
+            return $data->getRawContent();
         } else {
             return $data;
         }
